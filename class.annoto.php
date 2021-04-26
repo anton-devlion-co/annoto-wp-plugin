@@ -60,7 +60,7 @@ class Annoto {
 
         static::loadResources();
 
-        add_action('wp_loaded', ['Annoto', 'setCurrentUser']);
+        add_action('wp_loaded', static::setCurrentUser());
         add_filter('embed_oembed_html', ['Annoto', 'prepareVideoIFrameAttributes'], 10, 3);
     }
 
